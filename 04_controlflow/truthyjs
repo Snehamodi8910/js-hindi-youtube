@@ -1,0 +1,33 @@
+const useremail = []
+
+if(useremail){
+    console.log("got user email");
+}
+else{
+    console.log("didn't get");
+}
+
+//no comparison done 
+//string value hai to assumed ki truw
+//empty string hai to false
+//empty array hai to true
+
+//rules
+if(useremail.length === 0) console.log("array empty");
+const emptyObj = {}
+if(Object.keys(emptyObj).length === 0) console.log("empty object");
+
+
+//Nullish Coalescing Operator (??):null undefined
+
+let val1 ; 
+/* val1 = 5??8 //5
+val1 = null ?? 10 //10  */
+
+/* val1 = undefined ?? 15 //15
+ */
+val1 = null??10??20   //jo bhi first value milega 
+/* console.log(val1); */
+
+const teaprice = 100
+teaprice >= 80 ? console.log("greater than 80") : console.log("less than 80");;
