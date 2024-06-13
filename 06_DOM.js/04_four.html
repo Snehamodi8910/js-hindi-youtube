@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+        <meta name = "viewport" content = "width=device-width , initial-scale=1.0">
+        <title>DOM LEARNING with chai aur code </title>
+    </head>
+    <body style= "background-color: black; color:pink">
+        <ul class= "language">
+            <li>Javascript</li>
+        </ul>
+    </body>
+
+    <script>
+        function addLanguage(langName){
+            const li = document.createElement('li')
+            li.innerHTML = `${langName}`
+            document.querySelector('.language').appendChild(li)
+
+            
+        }
+
+        addLanguage("python")
+        addLanguage("java")
+
+        function addoptiLang(langName){
+            const li= document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+
+        addoptiLang('goLang')
+
+        //edit 
+        const secondLang = document.querySelector("li:nth-child(2)")
+        console.log(secondLang);
+        //secondLang.innerHTML = "MoJo"//not optimised 
+        const newli = document.createElement('li')
+        newli.textContent = "MOJO"
+        secondLang.replaceWith(newli)
+
+        const first = document.querySelector("li:nth-child(1)") 
+        first.outerHTML = '<li>TypeScript</li>'
+
+        //remove
+
+        const last = document.querySelector('li:last-child')
+        last.remove()
+
+    </script>
+</html>
+
